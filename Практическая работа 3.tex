@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage{mathtext}                    % Русский язык в формулах
+\usepackage{cmap}                        % Поддержка поиска русских слов в PDF (pdflatex)
+\usepackage[cp1251]{inputenc}            % Выбор языка и кодировки
+\usepackage[english, russian]{babel}     % Настройки для русского языка
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry} % поля страницы
+\usepackage{tikz}
+\usepackage{ccaption}
+\title{Практическая работа №3}
+\author{Студент группы 8871 Авсюкевич Станислав Витальевич}
+
+
+
+\begin{document}
+\maketitle
+\section{Задание}
+В данном задании было необходимо построить график не линейной функции из вариантов лабораторной работы №13, задание №4. Следовательно в данной работе будет использоватьс это уравнение графика $"x^3-3x^2+x=0"$. Возьмем интервал [-1;3,2] c шагом $=0,1$.
+
+Так же по заданию к данному графику следует провести 2-е касательные. Для первой касательной возьмём интервл [2;3,2] и с координатами в точке $x_0=3.2$. Уравнения первой касательной данног графика будет $12.52*x-34.816$. 
+
+\subsection{Две касательные к графику}
+К сожалению на данном чертеже не очень хорошо как посроены касательные. Из-за этго я возьму только часть графика, к которому я построил касательные.
+\clearpage
+\begin{tikzpicture}
+
+\begin{scope}[scale=1]
+	
+\draw[thin, ->] (-7,0) -- (7,0) node[right] {$X$};
+\draw[thin, ->] (0,-7) -- (0,7) node[left] {$Y$};
+	
+\foreach \x\xtext in {-1/-1,0.38/0.38,2/2,2.6/2.6,} %
+\draw (\x,0.1) -- (\x,-0.1) node[below] {$\xtext$};
+	
+\draw[domain=-1:3.2, smooth, purple] plot ({\x},{((\x)*(\x)*(\x))-(3*(\x)*(\x))+(\x))});
+\draw[domain=2.7:3.2, smooth, help lines, green] plot ({\x},{(12.52*(\x))-34.816});
+\draw[domain=2.3:3, smooth, help lines, blue] plot ({\x},{7.5141*\x-19.8094)});
+
+\end{scope};
+	
+\end{tikzpicture}
+\subsection{График с касательными в промежутке [2.5;3.2]}
+
+\begin{tikzpicture}
+
+\begin{scope}[scale=3]
+
+\draw[thin, ->] (0,0) -- (5,0) node[right] {$X$};
+%\draw[thin, ->] (0,-7) -- (0,7) node[left] {$Y$};
+
+\foreach \x\xtext in {2/2,2.6/2.6,3/3} %
+\draw (\x,0.1) -- (\x,-0.1) node[below] {$\xtext$};
+
+\draw[domain=2:3.2, smooth, purple] plot ({\x},{((\x)*(\x)*(\x))-(3*(\x)*(\x))+(\x))});
+\draw[domain=2.7:3.2, smooth, help lines, green] plot ({\x},{(12.52*(\x))-34.816});
+\draw[domain=2.3:3, smooth, help lines, blue] plot ({\x},{7.5141*\x-19.8094)});
+
+\end{scope};
+
+\end{tikzpicture}
+\end{document}

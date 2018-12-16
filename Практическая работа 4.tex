@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian] {babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors, smartlabels]{circuitikz}
+\title{Практическая работа 4}
+
+\author{студент Авсюкевич Станислав Витальевич}
+
+
+\begin{document}
+\maketitle
+
+\section{Практическая работа №4}
+
+
+\begin{tikzpicture}
+\begin{scope}[xscale=1,yscale=1]
+	\draw [rounded corners=4pt,color=white,ball color=gray,smooth] (0,0,0)
+	circle (2) node {1}; %1 Серый, первый шар.
+	
+	
+	
+	\draw [rounded corners=4pt,color=white,ball color=red,smooth] (2.5980762,- 5.1961524,- 1.5)
+circle (2) node {2}; 	%2 Красный шар
+	
+	
+	\draw [rounded corners=4pt,color=white,ball color=blue,smooth] (5.1961524,0,- 3)
+circle (2) node {3}; 	%2 Синий шар	
+
+		\draw [rounded corners=4pt,color=white,ball color=black,smooth] (1.9857038,- 1.7320508,- 2.5606602)
+circle (3) node {5}; 	%2 Зелёный шар
+
+	\draw [rounded corners=4pt,color=white,ball color=green,smooth] (0.1485865,1.7320508,- 5.7426407 )
+circle (2) node {4}; 	%2 Зелёный шар
+
+
+	
+	
+\end{scope}
+\end{tikzpicture}
+
+\end{document}

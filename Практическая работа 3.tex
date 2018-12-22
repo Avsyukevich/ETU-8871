@@ -42,7 +42,7 @@
 
 \begin{tikzpicture}
 
-\begin{scope}[scale=3]
+\begin{scope}[yscale=2, xscale=3.5]
 
 \draw[thin, ->] (0,0) -- (5,0) node[right] {$X$};
 %\draw[thin, ->] (0,-7) -- (0,7) node[left] {$Y$};
@@ -53,6 +53,9 @@
 \draw[domain=2:3.2, smooth, purple] plot ({\x},{((\x)*(\x)*(\x))-(3*(\x)*(\x))+(\x))});
 \draw[domain=2.7:3.2, smooth, help lines, green] plot ({\x},{(12.52*(\x))-34.816});
 \draw[domain=2.3:3, smooth, help lines, blue] plot ({\x},{7.5141*\x-19.8094)});
+\draw[thin,dashed] (3.2,5.248) -- (3.2,0) node [at end,below right] {$x_0$};
+\draw[thin,dashed] (2.78,1.079) -- (2.78,0) node [at end,below right] {$x_1$};
+
 
 \end{scope};
 

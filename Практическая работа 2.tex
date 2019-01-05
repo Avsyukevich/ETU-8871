@@ -39,7 +39,7 @@
 \draw[thin,dashed,->,blue] (0,0) -- (0,{9*sin(90)}) node [at end,left] {$Y_0$}; %Создание прямой координатной оси ОY_0.
 \draw[thin, dashed,purple]({\D*cos(\alfa)},{\D*sin(\alfa )}) -- (0,{(tan(90-\teta )*(\D*cos(\alfa))+(\D*sin(\alfa )}) node[at end, left] {$x_2$}; %Строю отрезок к оси ОY_0.
 \draw[thin,green]({\D*cos(\alfa) },{\D*sin(\alfa) }) -- (0,{\D*sin(\alfa) }) node[at end,above left] {$x^2$}; %Строю перпендикулярный отрезок к оси OY_0.
-\draw[thin,<->] (1.5,0) arc(0:35:1.5) node[midway,right] {$\alpha=35^\circ$}; %Обозначение угла альфа.
+\draw[thin,<->] ({(\D/2)*cos(\alfa )},0) arc({(\D/2)*cos(\alfa )}:\alfa:{(\D/2)*sin(\alfa )}) node[midway,right] {$\alpha={\alfa }^\circ$}; %Обозначение угла альфа.
 \draw[thin,<->] (8,0) arc(0:65:8) node[midway,right,above right] {$\Theta=65^\circ$}; %Обозначение угла тета.
 
 %Моя проверка правильности задания путем расчёта координат в ручную.
